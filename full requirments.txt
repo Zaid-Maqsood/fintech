@@ -1,0 +1,542 @@
+You are a senior full-stack fintech product engineer, system architect, and UI/UX expert.
+
+Your task is to build a fully functional MVP for a modular fintech web application that can be shown to fintech clients as a strong product demo.
+
+The goal is not to build a licensed bank, but to build a realistic, scalable, client-ready MVP that clearly demonstrates capability across:
+- Banking & finance app foundations
+- Budgeting & personal finance portal features
+- Payment flow simulation / integration-ready payment architecture
+- Analytics & reporting dashboards
+- Security-first architecture with compliance-ready foundations
+
+Build this as a modern production-style web app with clean architecture, strong UX, polished UI, and realistic flows.
+
+-----------------------------------
+1. PRODUCT GOAL
+-----------------------------------
+
+Build a fintech MVP that shows:
+- secure user onboarding and authentication
+- account and wallet-style financial overview
+- transaction management
+- budgeting and spending tracking
+- payment send/receive simulation
+- analytics dashboards
+- admin controls
+- security-first implementation
+- compliance-ready placeholders and structure
+
+This should feel like a premium SaaS fintech product, not a basic CRUD panel.
+
+The UI must be visually impressive, modern, responsive, interactive, and highly polished so that the app can be demoed to fintech clients confidently.
+
+-----------------------------------
+2. PRIMARY USERS / ROLES
+-----------------------------------
+
+Implement these roles:
+
+1. End User
+- manages their profile
+- views accounts/wallet
+- adds transactions
+- creates budgets
+- sends/receives mock payments
+- views analytics
+- receives alerts / notifications
+
+2. Admin
+- views all users
+- views transactions
+- sees platform analytics
+- reviews flagged transactions
+- manages high-level system data
+
+Use proper role-based routing and access control.
+
+-----------------------------------
+3. MVP MODULES TO BUILD
+-----------------------------------
+
+A. Authentication & User Management
+B. Finance Dashboard
+C. Transactions Module
+D. Budgeting Module
+E. Payment Simulation Module
+F. Analytics & Reporting
+G. Admin Panel
+H. Security & Compliance-Ready Foundation
+I. Notifications / Activity Feed
+J. Beautiful UI System
+
+-----------------------------------
+4. DETAILED FUNCTIONAL REQUIREMENTS
+-----------------------------------
+
+A. AUTHENTICATION & USER MANAGEMENT
+
+Build:
+- sign up
+- sign in
+- logout
+- forgot password flow UI
+- reset password flow UI
+- protected routes
+- role-based access
+- user profile page
+- edit profile
+- profile avatar placeholder
+- account settings page
+
+Auth requirements:
+- password hashing
+- JWT or secure session auth
+- refresh token strategy if appropriate
+- form validation
+- error handling
+- loading states
+- route guards
+
+User profile fields:
+- full name
+- email
+- phone
+- country
+- currency preference
+- timezone
+- risk level placeholder
+- KYC status placeholder
+- account status
+
+Provide demo seed users:
+- admin user
+- standard user
+
+B. FINANCE DASHBOARD
+
+Create a premium dashboard showing:
+- total balance
+- available balance
+- monthly income
+- monthly expenses
+- savings amount
+- budget usage summary
+- recent transactions
+- upcoming bills placeholder
+- recent activity feed
+- quick action buttons
+
+Dashboard cards should feel premium and interactive.
+Use charts and animated counters where appropriate.
+The dashboard should be clean, spacious, and high trust.
+
+C. TRANSACTIONS MODULE
+
+Build a complete transaction management flow.
+
+Features:
+- add income transaction
+- add expense transaction
+- add transfer transaction
+- categories
+- subcategories optional
+- notes / description
+- transaction date
+- payment method
+- status
+- tags optional
+
+Transaction list:
+- searchable
+- filter by date
+- filter by category
+- filter by type
+- filter by status
+- sortable
+- pagination or infinite list
+- export-ready structure
+
+Transaction detail:
+- click to open detail drawer or modal
+- show all related metadata
+- show audit metadata such as created at
+
+Categories examples:
+- salary
+- groceries
+- utilities
+- rent
+- subscriptions
+- travel
+- shopping
+- health
+- savings
+- transfers
+- other
+
+Seed the system with realistic sample transaction data.
+
+D. BUDGETING MODULE
+
+Build a budgeting portal with:
+- create monthly budget
+- create category-based budgets
+- set total spending limit
+- set category limits
+- track spent vs remaining
+- visual progress bars
+- overspending alerts
+- savings goals optional
+- budget summaries by month
+
+Views:
+- budget overview
+- budget detail
+- create/edit budget modal or page
+- historical months view
+
+Make this feel like a real personal finance experience, not just a form.
+
+E. PAYMENT SIMULATION MODULE
+
+Build a payment workflow that simulates real fintech usage without requiring real banking rails.
+
+Features:
+- send money
+- receive money
+- transfer between internal accounts/wallets
+- payment status: pending, completed, failed
+- recipient selection from internal demo users
+- mock reference IDs
+- transaction confirmation screen
+- transaction receipt screen
+- payment timeline / processing state
+- payment history
+
+Important:
+This is a simulation but it should feel realistic and client-demo ready.
+
+Architecture:
+- build the module in a way that real integrations like Stripe, Plaid, PayPal, banking APIs, or regional payment gateways could be plugged in later
+- isolate payment service logic cleanly
+- use adapter/service pattern if possible
+
+F. ANALYTICS & REPORTING
+
+Build strong reporting dashboards for both user and admin.
+
+User analytics:
+- income vs expense chart
+- spending by category
+- monthly cash flow chart
+- budget vs actual chart
+- top spending categories
+- recent financial trends
+- transaction frequency
+
+Admin analytics:
+- total users
+- active users
+- total transaction count
+- total transaction volume
+- flagged transactions count
+- platform growth summary
+- payment status breakdown
+
+Requirements:
+- visually strong charts
+- interactive filters
+- date range selectors
+- tooltips
+- card summaries
+- empty states
+- demo seed data
+
+G. ADMIN PANEL
+
+Build a professional admin portal with:
+- admin dashboard
+- user management table
+- transaction monitoring table
+- flagged transaction review screen
+- overview metrics
+- platform activity summary
+
+Admin features:
+- view all users
+- filter/search users
+- view user details
+- activate/deactivate user UI
+- view all transactions
+- filter high-value transactions
+- flag/unflag suspicious transactions
+- view analytics
+- view payment events
+
+Do not overbuild complex internal tools, but make the admin area highly presentable.
+
+H. SECURITY & COMPLIANCE-READY FOUNDATION
+
+This MVP must show strong security thinking.
+
+Implement:
+- secure auth flows
+- hashed passwords
+- protected API routes
+- role-based authorization
+- validation on both frontend and backend
+- secure error responses
+- environment variables
+- CORS setup
+- rate limiting if feasible
+- audit fields in key entities
+- logging structure
+- security-focused architecture
+
+Compliance-ready placeholders:
+- KYC status field
+- AML review status field
+- transaction risk score placeholder
+- suspicious activity flag
+- compliance notes field
+- user verification status UI
+- document verification placeholder page or component
+
+Do not build full KYC/AML infrastructure, but structure the code and UI so it is obvious those layers can be added later.
+
+I. NOTIFICATIONS / ACTIVITY FEED
+
+Build:
+- in-app notifications UI
+- activity feed for major actions
+- payment success/failure alerts
+- budget threshold alerts
+- transaction added alerts
+- admin flag alerts
+
+Can be demo/local state based if needed, but make it feel real.
+
+J. UI / DESIGN / INTERACTION QUALITY
+
+This is critical.
+
+The UI must be:
+- extremely clean
+- modern
+- interactive
+- fintech-grade
+- trustworthy
+- premium
+- smooth
+- visually balanced
+- responsive
+- demo-worthy
+
+Design direction:
+- premium SaaS fintech dashboard aesthetic
+- elegant spacing
+- clear typography hierarchy
+- strong card layouts
+- subtle gradients where appropriate
+- crisp tables
+- refined modals and drawers
+- modern forms
+- excellent empty states
+- elegant loading skeletons
+- polished toast notifications
+
+Animation requirements:
+- smooth page transitions
+- subtle hover states
+- animated counters
+- chart reveal animations
+- modal transitions
+- card micro-interactions
+- progressive loading animations
+- tasteful motion only, not excessive or distracting
+
+The app must feel alive and high-end, but still professional and suitable for finance.
+
+Do not generate a boring admin template.
+Avoid clutter.
+Avoid generic bootstrap-looking design.
+Avoid overly childish colors.
+Use a design system with consistency.
+
+-----------------------------------
+5. TECHNICAL EXPECTATIONS
+-----------------------------------
+
+Choose a modern stack suitable for fast fintech MVP delivery.
+
+Preferred stack:
+- Frontend: React
+- Styling: Tailwind CSS
+- UI primitives: shadcn/ui or equivalent modern component system
+- Animations: Framer Motion
+- Charts: Recharts or equivalent
+- Backend: Node.js 
+- Database: PostgreSQL. i have a database named "grayphite". it already has a schema of a project. make a new schema in this database named "banking" and use that schema for this app. 
+- Auth: JWT or secure session solution
+- Form validation: Zod / React Hook Form or equivalent
+
+the final app must have some real features as well. like tranferiing money between users and the amount goes up and down in real. similarly other things. some things can be UI only as well. decide yourself.
+
+-----------------------------------
+6. CODEBASE STRUCTURE
+-----------------------------------
+
+Build the project with clean structure and maintainability.
+
+Requirements:
+- modular folder organization
+- reusable components
+- service layer separation
+- API abstraction
+- central types/interfaces
+- clean state management
+- strong naming conventions
+- avoid messy one-file implementations
+
+Suggested layers:
+- auth
+- users
+- dashboard
+- transactions
+- budgets
+- payments
+- analytics
+- admin
+- notifications
+- shared/ui
+
+-----------------------------------
+7. DATABASE / DATA MODEL
+-----------------------------------
+
+Create proper schema/models for at least:
+
+- User
+- Role
+- Account / Wallet
+- Transaction
+- TransactionCategory
+- Budget
+- BudgetCategory
+- Payment
+- Notification
+- ActivityLog
+- ComplianceFlag or RiskFlag
+
+Include:
+- createdAt
+- updatedAt
+- status fields
+- relationships
+- seed data
+
+Seed the database with:
+- 1 admin
+- 3 to 5 demo users
+- realistic transactions
+- budgets
+- notifications
+- payment records
+- flagged samples for admin review
+
+-----------------------------------
+8. DEMO QUALITY REQUIREMENTS
+-----------------------------------
+
+The product must be demo-ready.
+
+That means:
+- no broken routes
+- no dead-end screens
+- no placeholder-only experience
+- all major flows should work
+- enough seeded data to make dashboards meaningful
+- polished loading, empty, success, and error states
+- realistic transaction/payment/budget demos
+- responsive layout for desktop and mobile
+- smooth UI interactions
+
+-----------------------------------
+9. OUTPUT REQUIREMENTS
+-----------------------------------
+
+I want you to:
+1. build the entire MVP codebase
+2. create all pages, components, backend, and data models
+3. add seed/demo data
+4. ensure the app runs locally without confusion and able to deploy
+5. create a README with setup steps
+6. explain the project structure briefly
+7. include environment variable examples
+8. make sure the UI is polished and interactive
+9. make sure the architecture is future-ready for real fintech integrations
+
+-----------------------------------
+10. IMPORTANT PRODUCT POSITIONING
+-----------------------------------
+
+This is not a toy budgeting app.
+
+This should present as:
+“A modular fintech platform MVP with transaction management, budgeting, payment workflows, analytics dashboards, admin controls, and compliance-ready foundations.”
+
+Everything in the implementation should support that positioning.
+
+-----------------------------------
+11. BUILD APPROACH
+-----------------------------------
+
+Proceed in this order:
+1. choose and initialize the stack
+2. define the data model
+3. build backend APIs/services
+4. build auth and route protection
+5. build main user dashboard
+6. build transactions module
+7. build budgeting module
+8. build payment simulation
+9. build analytics dashboards
+10. build admin portal
+11. activity feed
+12. polish UI and animations across the whole app
+13. seed demo data
+14. test flows and fix inconsistencies
+15. write README and setup notes
+
+-----------------------------------
+12. UI STANDARD TO FOLLOW
+-----------------------------------
+
+The final interface should feel similar in quality to premium fintech SaaS products:
+- modern dashboard quality
+- excellent spacing
+- high visual clarity
+- subtle motion
+- premium cards
+- elegant charts
+- beautiful dark/light compatible design if feasible
+- polished responsiveness
+
+Make the interface impressive enough that a fintech client immediately feels confidence in the team’s design and product capability.
+
+-----------------------------------
+13. NON-NEGOTIABLES
+-----------------------------------
+
+- fully functional MVP
+- clean, interactive UI
+- responsive design
+- premium dashboard design
+- realistic fintech feel
+- role-based flows
+- seeded demo data
+- no ugly default templates
+- no half-finished modules
+- architecture ready for future integrations
+- code should be reasonably clean and maintainable
+

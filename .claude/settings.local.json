@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"require\\(''''./src/app''''\\)\")",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/login -H \"Content-Type: application/json\" -d '{\"\"\"\"email\"\"\"\":\"\"\"\"alice@example.com\"\"\"\",\"\"\"\"password\"\"\"\":\"\"\"\"User@123\"\"\"\"}')",
+      "Bash(curl:*)",
+      "Bash(npx kill-port:*)"
+    ]
+  }
+}
