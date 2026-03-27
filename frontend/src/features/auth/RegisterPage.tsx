@@ -124,7 +124,7 @@ export default function RegisterPage() {
       setTokens(res.data.accessToken, res.data.refreshToken)
       toast({
         title: 'Account created!',
-        description: `Welcome to FinVault, ${res.data.user.full_name}`,
+        description: `Welcome to PocketPro, ${res.data.user.full_name}`,
       })
       navigate('/dashboard')
     } catch (err: any) {
@@ -150,7 +150,7 @@ export default function RegisterPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 mb-4 shadow-lg shadow-blue-600/30">
             <Shield className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-white">FinVault</h1>
+          <h1 className="text-3xl font-bold text-white">PocketPro</h1>
           <p className="text-blue-300 mt-1">Secure Financial Platform</p>
         </motion.div>
 

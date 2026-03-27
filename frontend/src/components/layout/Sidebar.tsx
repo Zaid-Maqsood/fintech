@@ -115,7 +115,7 @@ export default function Sidebar() {
               className="overflow-hidden"
             >
               <span className="text-lg font-bold text-sidebar-foreground whitespace-nowrap">
-                FinVault
+                PocketPro
               </span>
             </motion.div>
           )}

@@ -35,7 +35,7 @@ export default function Header() {
   const location = useLocation()
   const navigate = useNavigate()
 
-  const pageTitle = routeTitles[location.pathname] || 'FinVault'
+  const pageTitle = routeTitles[location.pathname] || 'PocketPro'
 
   const handleLogout = () => {
     logout()
