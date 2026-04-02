@@ -182,7 +182,12 @@ function PaymentDetailSheet({
   if (!payment) return null
 
   const isSender = payment.sender_id === currentUserId
-  const counterparty = isSender ? payment.receiver : payment.sender
+  const counterpartyName = isSender
+    ? (payment.receiver?.full_name ?? payment.receiver_name ?? 'Unknown')
+    : (payment.sender?.full_name ?? payment.sender_name ?? 'Unknown')
+  const counterpartyEmail = isSender
+    ? (payment.receiver?.email ?? payment.receiver_email)
+    : (payment.sender?.email ?? payment.sender_email)
   const cfg = statusConfig(payment.status)
 
   return (
@@ -222,8 +227,8 @@ function PaymentDetailSheet({
         <div className="space-y-4">
           <DetailRow
             label={isSender ? 'Sent to' : 'Received from'}
-            value={counterparty?.full_name ?? 'Unknown'}
-            sub={counterparty?.email}
+            value={counterpartyName}
+            sub={counterpartyEmail}
           />
           <Separator />
           <DetailRow label="Reference ID">
@@ -745,8 +750,9 @@ function PaymentRow({
   onClick: () => void
 }) {
   const isSender = payment.sender_id === currentUserId
-  const counterparty = isSender ? payment.receiver : payment.sender
-  const counterpartyName = counterparty?.full_name ?? 'Unknown User'
+  const counterpartyName = isSender
+    ? (payment.receiver?.full_name ?? payment.receiver_name ?? 'Unknown User')
+    : (payment.sender?.full_name ?? payment.sender_name ?? 'Unknown User')
   const cfg = statusConfig(payment.status)
 
   return (
